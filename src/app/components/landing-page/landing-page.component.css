@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .menu {
   background: #222;
   padding: 5px 20px;
@@ -152,8 +166,8 @@
 }
 
 .image{
-    width: 100%;
     height: 90vh;
+    width: 100%;
     position: absolute;
 }
 
@@ -182,3 +196,128 @@
         height: 50vh;
     }
   }
+
+
+/*---------------Cards----------------------*/
+.service{
+  background: #EFEDE7;
+  padding-top: 30px;
+  height: 63vh;
+}
+
+.service .box-container .box{
+  flex: 1 1 30rem;
+  text-align: center;
+  padding:2rem;
+  background:#fff;
+  border-radius: .5rem;
+
+}
+
+section .card .icon{
+  height: 55px;
+  width: 55px;
+  background: #043E85;
+  border-radius: 50%;
+  border: #fff 3px solid ;
+  transform: translateY(100px);
+}
+
+section .card .icon i{
+  justify-content: center;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  transform: translateY(15%);
+}
+
+.card{
+  position: relative;
+  background: #CEE9FF;
+  border-radius: 15px;
+  margin: 20px 0;
+  height: 350px;
+  width: 230px;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  height: 145px;
+  width: 100%;
+  background: #043E85;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.content-image{
+  background: #043E85;
+  border-radius: 20px;
+  transform: translateX(-100px);
+}
+
+.content-image img{
+  height: 125px;
+  width: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+}
+
+.card .name-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: #000;
+  transform: translateY(-10px);
+  font-family: 'Poppins', medium;
+}
+
+.name-text .name{
+  font-size: 20px;
+  font-weight: 600;
+  transform: translateY(93px);
+}
+
+.name-text .text{
+  font-size: 15px;
+  font-weight: 500;
+  transform: translateY(98px);
+}
+
+.media-button{
+  transform: translateY(160px);
+  z-index: 300;
+}
+
+.btn-Card{
+  font-family: 'Poppins', medium;
+  padding: 10px;
+  background: #043E85;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+}
+.btn-Card:hover{
+  background: #000000;
+}
+.content{
+  max-width: 100vw;
+  height: auto;
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
