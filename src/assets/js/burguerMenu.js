@@ -1,9 +1,20 @@
-$(function () {
-    $(".toggle").on("click", function () {
-        if ($(".item").hasClass("active")) {
-            $(".item").removeClass("active");
-        } else {
-            $(".item").addClass("active");
-        }
+let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
     });
-});
+    scrollProgress.style.background = `conic-gradient(#043E85 ${scrollValue}%, #ffffff ${scrollValue}%)`;
+  };
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
