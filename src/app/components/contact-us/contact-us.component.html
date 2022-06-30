@@ -1,0 +1,127 @@
+<!-- Nav Bar -->
+<header>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+
+        <div class="logo-container">
+            <h3 class="logo">Opus <span>Dei</span></h3>
+        </div>
+
+        <div class="nav-btn">
+            <div class="nav-links">
+                <ul>
+                    <li class="nav-link" style="--i: .6s">
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="nav-link" style="--i: .85s">
+                        <a href="#">Actividades<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link">
+                                    <a href="#">Actividades de Hombres</a>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a href="#">Actividades de Mujeres</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link" style="--i: 1.1s">
+                        <a href="#">Acerca<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link">
+                                    <a href="#">Acerca de su estadía</a>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a href="#">Acerca de las casas de retiro</a>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a href="#">Acerca de Opus Dei</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link" style="--i: 1.35s">
+                        <a routerLink="/contactUs">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="log-sign" style="--i: 1.8s">
+                <a href="#" class="btn transparent">Log in</a>
+                <a href="#" class="btn solid">Sign up</a>
+            </div>
+        </div>
+
+        <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Us -->
+
+<div class="contactBox">
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Contactenos</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+          dolorum adipisci recusandae praesentium dicta!
+        </p>
+        <div class="info">
+          <div class="information">
+            <img src="../../../assets/img/contactUs/location.png" class="icon" alt="" />
+            <p class="infomationTitle" >Guatemala</p>
+          </div>
+          <div class="information">
+            <img src="../../../assets/img/contactUs/email.png" class="icon" alt="" />
+            <p class="infomationTitle">lorem@ipsum.com</p>
+          </div>
+          <div class="information">
+            <img src="../../../assets/img/contactUs/phone.png" class="icon" alt="" />
+            <p class="infomationTitle">123-456-789</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Contactanos por :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form (ngSubmit)="sendMessage(contactForm)" #contactForm="ngForm" class="mx-1 mx-md-4" autocomplete="off">
+          <h3 class="title">Contactenos</h3>
+          <div class="input-container">
+            <input [(ngModel)]="contact.username" placeholder="Nombre" type="text" name="username" class="input" />
+          </div>
+          <div class="input-container">
+            <input [(ngModel)]="contact.email" placeholder="Correo Electronico" type="email" name="email" class="input" />
+          </div>
+          <div class="input-container">
+            <input [(ngModel)]="contact.phone" placeholder="Telefono" type="tel" name="phone" class="input" />
+          </div>
+          <div class="input-container textarea">
+            <textarea [(ngModel)]="contact.message" placeholder="Mensaje" name="message" class="input"></textarea>
+          </div>
+          <input type="submit" value="Enviar" class="btnContact" />
+        </form>
+      </div>
+    </div>
+  </div>
