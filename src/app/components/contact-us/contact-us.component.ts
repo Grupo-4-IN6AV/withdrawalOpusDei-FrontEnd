@@ -24,6 +24,10 @@ export class ContactUsComponent implements OnInit {
   }
 
   sendMessage(contactForm: any) {
+    this.ContactUsRest.startSpinner();
+    setTimeout(() => {
+      this.ContactUsRest.stopSpinner();  
+    }, 2200);
     this.ContactUsRest.sendMessage(this.contact).subscribe
       ({
         next: (res: any) => {
