@@ -10,13 +10,15 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { GeneralActivitiesComponent } from './components/activities/general-activities/general-activities.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    GeneralActivitiesComponent
   ],
   imports: [
     BrowserModule,
