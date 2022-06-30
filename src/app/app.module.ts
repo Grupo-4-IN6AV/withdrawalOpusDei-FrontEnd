@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
+import { NgxSpinnerModule } from 'ngx-spinner';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
