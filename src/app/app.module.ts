@@ -11,6 +11,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { GeneralActivitiesComponent } from './components/activities/general-activities/general-activities.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { GeneralActivitiesComponent } from './components/activities/general-acti
     AppComponent,
     LandingPageComponent,
     ContactUsComponent,
-    GeneralActivitiesComponent
+    GeneralActivitiesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
