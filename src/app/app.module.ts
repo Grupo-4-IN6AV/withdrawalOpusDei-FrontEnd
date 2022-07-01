@@ -12,6 +12,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { GeneralActivitiesComponent } from './components/activities/general-activities/general-activities.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MenActivitiesComponent } from './components/activities/men-activities/men-activities.component';
+import { WomenActivitiesComponent } from './components/activities/women-activities/women-activities.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     LandingPageComponent,
     ContactUsComponent,
     GeneralActivitiesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MenActivitiesComponent,
+    WomenActivitiesComponent
   ],
   imports: [
     BrowserModule,
