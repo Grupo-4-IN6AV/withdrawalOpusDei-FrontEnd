@@ -17,7 +17,7 @@
                         <a routerLink="/activities">Actividades<i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
-                                <li routerLink="/menActivities"  class="dropdown-link">
+                                <li routerLink="/activities/menActivities"  class="dropdown-link">
                                     <a>Actividades de Hombres</a>
                                 </li>
                                 <li routerLink="/activities/womenActivities" class="dropdown-link">
@@ -27,17 +27,17 @@
                         </div>
                     </li>
                     <li class="nav-link" style="--i: 1.1s">
-                        <a href="#">Acerca<i class="fas fa-caret-down"></i></a>
+                        <a routerLink="/about">Acerca<i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li class="dropdown-link">
-                                    <a href="#">Acerca de su estadía</a>
+                                    <a routerLink="/aboutOfYouStadie" >Acerca de su estadía</a>
                                 </li>
                                 <li class="dropdown-link">
-                                    <a href="#">Acerca de las casas de retiro</a>
+                                    <a routerLink="/aboutHome">Acerca de las casas de retiro</a>
                                 </li>
                                 <li class="dropdown-link">
-                                    <a href="#">Acerca de Opus Dei</a>
+                                    <a routerLink="/aboutOpusDei">Acerca de Opus Dei</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,8 +48,7 @@
                 </ul>
             </div>
             <div class="log-sign" style="--i: 1.8s">
-                <a href="#" class="btn transparent">Log in</a>
-                <a href="#" class="btn solid">Sign up</a>
+                <a routerLink="login" class="btn transparent">Log in</a>
             </div>
         </div>
 
@@ -151,8 +150,10 @@
                             <span class="text">Retiros y talleres en
                                 español</span>
                         </div>
-                        <div class="media-button">
-                            <button class="btn-Card">Leer más</button>
+                        <div class="button-newStyle">
+                            <div class="media-button">
+                                <button class="btn-Card">Leer más</button>
+                            </div>
                         </div>
                     </div>
                 </div>

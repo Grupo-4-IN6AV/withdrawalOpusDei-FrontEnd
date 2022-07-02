@@ -14,6 +14,9 @@ import { GeneralActivitiesComponent } from './components/activities/general-acti
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MenActivitiesComponent } from './components/activities/men-activities/men-activities.component';
 import { WomenActivitiesComponent } from './components/activities/women-activities/women-activities.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
+import { HomeOrganizerComponent } from './components/organizer/home-organizer/home-organizer.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { WomenActivitiesComponent } from './components/activities/women-activiti
     GeneralActivitiesComponent,
     PageNotFoundComponent,
     MenActivitiesComponent,
-    WomenActivitiesComponent
+    WomenActivitiesComponent,
+    LoginComponent,
+    HomeAdminComponent,
+    HomeOrganizerComponent
   ],
   imports: [
     BrowserModule,
