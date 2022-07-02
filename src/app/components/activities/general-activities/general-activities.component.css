@@ -437,10 +437,6 @@ header {
 
 .Back{
     background: #EFEDE7;
-    min-width: 100%;
-    max-width: 100vw;
-    max-height: 100%;
-    min-height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -450,7 +446,8 @@ header {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    max-width: 1024px;
+    max-width: 950px;
+    
 }
 
 .card-Act{
@@ -462,7 +459,7 @@ header {
     cursor: default;
     transition: all 400ms ease;
     border: #043E85 solid 15px;
-    padding: 15px;
+    padding: 5px;
 }
 
 .card-Act:hover{
@@ -488,8 +485,7 @@ header {
 
 .card-Act .content p{
     text-align: justify;
-    line-height: 1.5;
-    padding-bottom: 30px;
+    line-height: 1.4;
 }
 
 .blog-post__cta {
@@ -499,13 +495,13 @@ header {
     text-transform: uppercase;
     font-size: 1.2rem;
     color: #ffffff;
-    background: linear-gradient(to right, #043E85 0%, #043E85 100%);
+    background: linear-gradient(to right, #043E85 0%, #000000 100%);
     background-size: 200%;
     background-position: right;
     transition: background-position .5s;
     border-radius: 0.8rem;
     text-decoration: none;
-  }
+}
 
 
 

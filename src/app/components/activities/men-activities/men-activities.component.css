@@ -453,7 +453,9 @@ body{
 
 .container-all{
   padding: 0 40px;
-  padding-bottom: 15.1px;
+  padding-bottom: 2%;
+  height: 100%;
+  min-height: 82.5vh;
 }
 
 .container-text h1{
@@ -462,27 +464,28 @@ body{
 }
 
 .content{
-  padding: 0 30px;
+  padding: 0 10px;
 }
 
 .text-events{
   background: #C6D7E6;
   border: #043E85 5px solid;
   border-radius: 0.8rem;
-  line-height: 25px ;
-  padding: 0 20px;
+  line-height: 1 ;
+  padding: 15px 10px;
+  columns: 2;
 }
+
 
 .text-events ul{
   list-style-position: outside;
   list-style-type: disc;
-  margin: 10px;
-  columns: 3;
 }
 
-.text-events p{
+.text-events li{
   font-size: 18px;
-  font-weight: 1;
+  font-weight: .5;
+  line-height: 1;
   padding: 0;
   margin: 0;
 }
@@ -511,10 +514,14 @@ body{
 }
 @media screen and (max-width: 1920px){
   body{
-    min-width: 100vw;
-    min-height: 82.5vh;
     max-width: 100%;
     max-height: 100%;
+  }
+  .container-all{
+    padding: 0 40px;
+    padding-bottom: 2%;
+    height: 100%;
+    min-height: 82.5vh;
   }
 }
 
