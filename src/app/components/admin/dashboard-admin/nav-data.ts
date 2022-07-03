@@ -5,33 +5,28 @@ export const navbarData = [
         label: 'Home'
     },
     {
-        routeLink: 'users',
+        routeLink: 'organizes',
         icon: 'fa fa-users',
-        label: 'Users'
+        label: 'Organizes'
     },
     {
-        routeLink: 'hotels',
-        icon: 'fa fa-building',
-        label: 'Hotels'
+        routeLink: 'houses',
+        icon: 'fa-solid fa-house-chimney-user',
+        label: 'Houses'
     },
     {
-        routeLink: 'services',
-        icon: 'fa fa-bell-concierge',
-        label: 'Services'
+        routeLink: 'rooms',
+        icon: 'fas fa-bed',
+        label: 'Rooms'
     },
     {
-        routeLink: 'products',
-        icon: 'fas fa-shopping-bag',
-        label: 'Products'
+        routeLink: 'events',
+        icon: 'fas fa-calendar',
+        label: 'Events'
     },
     {
-        routeLink: 'branches',
-        icon: 'fas fa-sitemap',
-        label: 'Branches'
-    },
-    {
-        routeLink: 'salesProducts',
+        routeLink: 'reservations',
         icon: 'fas fa-shopping-cart',
-        label: 'Sales Products'
+        label: 'Reservations'
     },
 ];

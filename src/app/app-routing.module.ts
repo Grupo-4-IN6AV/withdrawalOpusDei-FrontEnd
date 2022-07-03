@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GeneralActivitiesComponent } from './components/activities/general-activities/general-activities.component';
 import { MenActivitiesComponent } from './components/activities/men-activities/men-activities.component';
 import { WomenActivitiesComponent } from './components/activities/women-activities/women-activities.component';
+import { EventsAdminComponent } from './components/admin/events-admin/events-admin.component';
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'admin', component: SetComponentsAdminComponent, 
     children:[
       {path: 'home', component: HomeAdminComponent},
+      {path: 'events', component: EventsAdminComponent},
     ]},
 
   // CONTROL DE RUTAS DE ORGANIZADORES //

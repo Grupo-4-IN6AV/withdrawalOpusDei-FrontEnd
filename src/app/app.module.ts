@@ -23,6 +23,7 @@ import { BodyOrganizerComponent } from './components/organizer/body-organizer/bo
 import { DashboardOrganizerComponent } from './components/organizer/dashboard-organizer/dashboard-organizer.component';
 import { SetComponentsOrganizerComponent } from './components/organizer/set-components-organizer/set-components-organizer.component';
 import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
+import { EventsAdminComponent } from './components/admin/events-admin/events-admin.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { SetComponentsAdminComponent } from './components/admin/set-components-a
     BodyOrganizerComponent,
     DashboardOrganizerComponent,
     SetComponentsOrganizerComponent,
-    SetComponentsAdminComponent
+    SetComponentsAdminComponent,
+    EventsAdminComponent
   ],
   imports: [
     BrowserModule,
