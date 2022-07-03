@@ -4,24 +4,38 @@ import { GeneralActivitiesComponent } from './components/activities/general-acti
 import { MenActivitiesComponent } from './components/activities/men-activities/men-activities.component';
 import { WomenActivitiesComponent } from './components/activities/women-activities/women-activities.component';
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
+import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeOrganizerComponent } from './components/organizer/home-organizer/home-organizer.component';
+import { SetComponentsOrganizerComponent } from './components/organizer/set-components-organizer/set-components-organizer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'landingPage', component: LandingPageComponent},
-
   {path: 'contactUs', component: ContactUsComponent},
-  {path: 'activities', component: GeneralActivitiesComponent},
-  {path: 'menActivities', component: MenActivitiesComponent},
-  {path: 'womenActivities', component: WomenActivitiesComponent},
 
+  {path: 'activities', component: GeneralActivitiesComponent, 
+    children:[
+      {path: 'menActivities', component: MenActivitiesComponent},
+  {path: 'womenActivities', component: WomenActivitiesComponent},
+    ]},
+
+  // CONTROL DE RUTAS DE ADMINISTRADOR //
   {path: 'login', component: LoginComponent},
-  {path: 'homeAdmin', component: HomeAdminComponent},
-  {path: 'homeOrganizer', component: HomeOrganizerComponent},
+  
+  {path: 'admin', component: SetComponentsAdminComponent, 
+    children:[
+      {path: 'home', component: HomeAdminComponent},
+    ]},
+
+  // CONTROL DE RUTAS DE ORGANIZADORES //
+  {path: 'organizer', component: SetComponentsOrganizerComponent,
+    children:[
+      {path:'home', component: HomeOrganizerComponent},
+  ]},
 
   {path: '**', component: PageNotFoundComponent},
 ];

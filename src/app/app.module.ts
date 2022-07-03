@@ -17,6 +17,12 @@ import { WomenActivitiesComponent } from './components/activities/women-activiti
 import { LoginComponent } from './components/login/login.component';
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { HomeOrganizerComponent } from './components/organizer/home-organizer/home-organizer.component';
+import { BodyAdminComponent } from './components/admin/body-admin/body-admin.component';
+import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
+import { BodyOrganizerComponent } from './components/organizer/body-organizer/body-organizer.component';
+import { DashboardOrganizerComponent } from './components/organizer/dashboard-organizer/dashboard-organizer.component';
+import { SetComponentsOrganizerComponent } from './components/organizer/set-components-organizer/set-components-organizer.component';
+import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 
 
 @NgModule({
@@ -30,7 +36,13 @@ import { HomeOrganizerComponent } from './components/organizer/home-organizer/ho
     WomenActivitiesComponent,
     LoginComponent,
     HomeAdminComponent,
-    HomeOrganizerComponent
+    HomeOrganizerComponent,
+    BodyAdminComponent,
+    DashboardAdminComponent,
+    BodyOrganizerComponent,
+    DashboardOrganizerComponent,
+    SetComponentsOrganizerComponent,
+    SetComponentsAdminComponent
   ],
   imports: [
     BrowserModule,
