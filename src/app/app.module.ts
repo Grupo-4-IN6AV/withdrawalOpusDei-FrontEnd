@@ -24,6 +24,7 @@ import { DashboardOrganizerComponent } from './components/organizer/dashboard-or
 import { SetComponentsOrganizerComponent } from './components/organizer/set-components-organizer/set-components-organizer.component';
 import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 import { EventsAdminComponent } from './components/admin/events-admin/events-admin.component';
+import { HousesComponent } from './components/houses/houses.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { EventsAdminComponent } from './components/admin/events-admin/events-adm
     DashboardOrganizerComponent,
     SetComponentsOrganizerComponent,
     SetComponentsAdminComponent,
-    EventsAdminComponent
+    EventsAdminComponent,
+    HousesComponent
   ],
   imports: [
     BrowserModule,

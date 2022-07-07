@@ -7,6 +7,7 @@ import { EventsAdminComponent } from './components/admin/events-admin/events-adm
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { HousesComponent } from './components/houses/houses.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeOrganizerComponent } from './components/organizer/home-organizer/home-organizer.component';
@@ -16,13 +17,14 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'landingPage', component: LandingPageComponent},
-  {path: 'contactUs', component: ContactUsComponent},
+  {path: 'contactanos', component: ContactUsComponent},
 
-  {path: 'activities', component: GeneralActivitiesComponent, 
+  {path: 'actividades', component: GeneralActivitiesComponent, 
     children:[
-      {path: 'menActivities', component: MenActivitiesComponent},
-  {path: 'womenActivities', component: WomenActivitiesComponent},
+      {path: 'actividadesHombre', component: MenActivitiesComponent},
+  {path: 'actividadesMujeres', component: WomenActivitiesComponent},
     ]},
+    {path: 'casas', component: HousesComponent},
 
   // CONTROL DE RUTAS DE ADMINISTRADOR //
   {path: 'login', component: LoginComponent},
@@ -34,7 +36,7 @@ const routes: Routes = [
     ]},
 
   // CONTROL DE RUTAS DE ORGANIZADORES //
-  {path: 'organizer', component: SetComponentsOrganizerComponent,
+  {path: 'organizador', component: SetComponentsOrganizerComponent,
     children:[
       {path:'home', component: HomeOrganizerComponent},
   ]},

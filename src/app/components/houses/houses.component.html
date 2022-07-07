@@ -1,0 +1,26 @@
+<body>
+    <div class="">
+        <div class="article-contener">
+            <ul class="groups" *ngFor=" let house of houses" >
+                <li>
+                    <div class="card">
+                        <div class="image-session">
+                            <img src="../../../assets/img/login/logo.png" alt="imgage1" class="image">
+                        </div>
+                        <div class="meta-sission">
+                            <div class="body">
+                                <h1 class="title">{{house.name}}</h1>
+                                <h2 class="desc">{{house.township}}, {{house.country}} </h2>
+                                <p class="desc-dos">{{house.address}}</p>
+
+                            </div>
+                            <div class="footer">
+                                <a href="#" class="button">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
