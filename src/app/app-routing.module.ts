@@ -22,8 +22,8 @@ const routes: Routes = [
   {path: 'actividades', component: GeneralActivitiesComponent, 
     children:[
       {path: 'actividadesHombre', component: MenActivitiesComponent},
-  {path: 'actividadesMujeres', component: WomenActivitiesComponent},
     ]},
+    
     {path: 'casas', component: HousesComponent},
 
   // CONTROL DE RUTAS DE ADMINISTRADOR //

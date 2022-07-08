@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//GOOGLE//
+
+//----------------------//
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
@@ -25,6 +29,8 @@ import { SetComponentsOrganizerComponent } from './components/organizer/set-comp
 import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 import { EventsAdminComponent } from './components/admin/events-admin/events-admin.component';
 import { HousesComponent } from './components/houses/houses.component';
+import { SearchHousePipe } from './pipes/searchHouse/search-house.pipe';
+import { DevelopsComponent } from './components/develops/develops.component';
 
 
 @NgModule({
@@ -46,7 +52,9 @@ import { HousesComponent } from './components/houses/houses.component';
     SetComponentsOrganizerComponent,
     SetComponentsAdminComponent,
     EventsAdminComponent,
-    HousesComponent
+    HousesComponent,
+    SearchHousePipe,
+    DevelopsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +62,7 @@ import { HousesComponent } from './components/houses/houses.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
