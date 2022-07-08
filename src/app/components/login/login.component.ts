@@ -27,19 +27,23 @@ export class LoginComponent implements OnInit
 
   login()
   {
-    this.userRest.login(this.user).subscribe({
+    var params = {
+      account: this.user.username,
+      password: this.user.password
+    }
+    this.userRest.login(params).subscribe({
       next: (res:any)=>{
-        localStorage.setItem('identity', JSON.stringify(res.already));
+        localStorage.setItem('identity', JSON.stringify(res.userExist));
         localStorage.setItem('token', res.token);
         
         Swal.fire({
           icon:'success',
           title: res.message,
-          html:'Welcome <b>'+ res.already.username+'</b>',
+          html:'Welcome <b>'+ res.userExist.username+'</b>',
           confirmButtonColor: '#28B463'
         })
 
-        const verificarAdmin = res.already.role;
+        const verificarAdmin = res.userExist.role;
         //VERIFICA A DONDE LLEVARME//
         if(verificarAdmin == 'ADMINISTRADOR')
          {this.router.navigate(['/admin/home']);}

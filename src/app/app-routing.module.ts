@@ -7,6 +7,7 @@ import { EventsAdminComponent } from './components/admin/events-admin/events-adm
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { SetComponentsAdminComponent } from './components/admin/set-components-admin/set-components-admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { DevelopsComponent } from './components/develops/develops.component';
 import { HousesComponent } from './components/houses/houses.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
@@ -25,6 +26,11 @@ const routes: Routes = [
     ]},
     
     {path: 'casas', component: HousesComponent},
+
+    {path: 'acercaDeLosDesarrolladores', component: DevelopsComponent },
+    {path: 'acercaDeTuEstadia', component: DevelopsComponent },
+    {path: 'acercaDeLasCasas', component: DevelopsComponent },
+    {path: 'acercaDeOpusDei', component: DevelopsComponent },
 
   // CONTROL DE RUTAS DE ADMINISTRADOR //
   {path: 'login', component: LoginComponent},

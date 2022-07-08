@@ -1,77 +1,142 @@
-<!doctype html>
-<html lang="en">
+<!-- NavBar -->
+<header>
+  <div class="ContainerNavBar">
+    <input type="checkbox" name="" id="check">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="logo-container">
+      <h3 class="logo">Opus <span>Dei</span></h3>
+    </div>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/ffec4ec2ed.js" crossorigin="anonymous"></script>
-</head>
-<section>
-  <div class="row g-0">
-    <div class="col-lg-7 d-none d-lg-block" style="height:100vh">
-      <div styele="height:100%" id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item img-2 min-vh-100 active">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="font-weight-bold">View the Most Hotels</h5>
+    <div class="nav-btn">
+      <div class="nav-links">
+        <ul>
+          <li class="nav-link " style="--i: .6s">
+            <a routerLink="/landingPage">Inicio</a>
+          </li>
+          <li class="nav-link" style="--i: .6s">
+            <a href="/casas" class="active">Casas</a>
+          </li>
+          <li class="nav-link" style="--i: .85s">
+            <a routerLink="/actividades">Actividades<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown">
+              <ul>
+                <li routerLink="/actividades/actividadesHombre" class="dropdown-link">
+                  <a>Actividades de Hombres</a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="carousel-item img-1 min-vh-100">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="font-weight-bold">Make Your Reservations</h5>
-              <a class="color text-decoration-none">Hotels Manager</a>
+          </li>
+          <li class="nav-link" style="--i: 1.1s">
+            <a>Acerca<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown">
+              <ul>
+                <li class="dropdown-link">
+                  <a routerLink="/aboutOfYouStadie">Acerca de su estadía</a>
+                </li>
+                <li class="dropdown-link">
+                  <a routerLink="/acercaDeLasCasas">Acerca de las casas de retiro</a>
+                </li>
+                <li class="dropdown-link">
+                  <a routerLink="/acercaDeOpusDei">Acerca de Opus Dei</a>
+                </li>
+                <li class="dropdown-link">
+                  <a routerLink="/acercaDeLosDesarrolladores">Acerca de los Desarrolladores</a>
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          </li>
+          <li class="nav-link" style="--i: 1.35s">
+            <a routerLink="/contactanos">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="log-sign" style="--i: 1.8s">
+        <a routerLink="login" class="btnNavBar transparent">Log in</a>
       </div>
     </div>
-    <div class="col-lg-5 bg-dark d-flex flex-column align-items-end min-vh-100">
-      <div class="div mr-2 w-100">
-        <img src="../../../assets/images/login/Logo.png" class="mt-5 img-fluid logo" />
-      </div>
-      <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4">
-        <h1 class="font-weight-bold mb-4 letras">Sign In</h1>
-        <form (ngSubmit)="login()" class="mb-5">
-          <div class="mb-4">
-            <label for="exampleInputEmail1" class="form-label font-weight-bold">Username</label>
-            <input [(ngModel)]="user.username" name="username" type="text" class="form-control bg-dark-x border-2"
-              id="username" placeholder="Insert your Username" aria-describedby="emailHelp">
-          </div>
-          <div class="mb-4">
-            <label for="exampleInputPassword1" class="form-label font-weight-bold">Password</label>
-            <input [(ngModel)]="user.password" name="password" type="password" id="password"
-              class="form-control bg-dark-x border-2 mb-2" placeholder="Insert your Password">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Log In</button>
-        </form>
+
+    <div class="hamburger-menu-container">
+      <div class="hamburger-menu">
+        <div></div>
       </div>
     </div>
   </div>
-</section>
+</header>
 
-<!-- Optional JavaScript -->
-<!-- Popper.js first, then Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-  integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<!-- Login -->
 
-</html>
+<body>
+  <div class="subSubContainer">
+    <div class="subContainer">
+      <div class="container">
+        <div class="forms-container">
+        </div>
+      </div>
+      <div class="signin-signup">
+        <form (ngSubmit)="login()" action="#" class="sign-in-form">
+          <h2 class="title">Iniciar Seción</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input [(ngModel)]="user.username" name="username" type="text" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input [(ngModel)]="user.password" name="password" type="password" placeholder="Password" />
+          </div>
+          <input type="submit" value="Login" class="btnLogin solid" />
+          <p class="social-text">Or Sign in with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </form>
+        <form action="#" class="sign-up-form">
+          <h2 class="title">Sign up</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Contraseña" />
+          </div>
+          <input type="submit" class="btn" value="Sign up" />
+          <p class="social-text">Or Sign up with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <img src="https://cdn-icons-png.flaticon.com/512/5798/5798153.png" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+</body>
