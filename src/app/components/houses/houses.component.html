@@ -1,26 +1,133 @@
-<body>
-    <div class="">
-        <div class="article-contener">
-            <ul class="groups" *ngFor=" let house of houses" >
-                <li>
-                    <div class="card">
-                        <div class="image-session">
-                            <img src="../../../assets/img/login/logo.png" alt="imgage1" class="image">
-                        </div>
-                        <div class="meta-sission">
-                            <div class="body">
-                                <h1 class="title">{{house.name}}</h1>
-                                <h2 class="desc">{{house.township}}, {{house.country}} </h2>
-                                <p class="desc-dos">{{house.address}}</p>
+<header>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
 
+        <div class="logo-container">
+            <h3 class="logo">Opus <span>Dei</span></h3>
+        </div>
+
+        <div class="nav-btn">
+            <div class="nav-links">
+                <ul>
+                    <li class="nav-link " style="--i: .6s">
+                        <a routerLink="/landingPage">Inicio</a>
+                    </li>
+                    <li class="nav-link nav-link-active" style="--i: .6s">
+                        <a href="/casas" class="active">Casas</a>
+                    </li>
+                    <li class="nav-link" style="--i: .85s">
+                        <a routerLink="/activities">Actividades<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <ul>
+                                <li routerLink="/activities/menActivities" class="dropdown-link">
+                                    <a>Actividades de Hombres</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link" style="--i: 1.1s">
+                        <a>Acerca<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link">
+                                    <a routerLink="/aboutOfYouStadie">Acerca de su estadía</a>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a routerLink="/aboutHome">Acerca de las casas de retiro</a>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a routerLink="/aboutOpusDei">Acerca de Opus Dei</a>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a routerLink="/aboutDevelops">Acerca de los Desarrolladores</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link" style="--i: 1.35s">
+                        <a routerLink="/contactUs">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="log-sign" style="--i: 1.8s">
+                <a routerLink="login" class="btn transparent">Log in</a>
+            </div>
+        </div>
+
+        <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="form-input mt-5">
+        <input placeholder="Buscar..." [(ngModel)]="searchHouse">
+        <button type="submit" class="search-btn"><i class='fa fa-search'></i></button>
+    </div>
+    <br>
+    <div class="father">
+        <div class="cards">
+            <div class="article-contener">
+                <ul class="groups" *ngFor=" let house of houses | searchHouse : searchHouse ; let i = index" >
+                    <li>
+                        <div class="card" (mouseenter)="changeMap(i)" (mouseleave)="changeCentroamerica()">
+                            <div class="image-session">
+                                <img src="https://images.homify.com/c_fill,f_auto,h_420,q_auto,w_780/v1440106804/p/photo/image/565790/FACHADA_2.jpg"
+                                    alt="imgage1" class="image">
                             </div>
-                            <div class="footer">
-                                <a href="#" class="button">Más información</a>
+                            <div class="meta-sission">
+                                <div class="body">
+                                    <h1 class="title">{{house.name}}</h1>
+                                    <h2 class="desc">{{house.township}}, {{house.country}} </h2>
+                                    <p class="desc-dos">{{house.address}}</p>
+
+                                </div>
+                                <div class="footer">
+                                    <a href="#" class="button">Más información</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="map">
+            <iframe *ngIf="centroamerica"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7993773.89051672!2d-89.22394376092431!3d11.9599639605927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f0b58c0f7680811%3A0x8dace0c7060b2570!2sCentroam%C3%A9rica!5e0!3m2!1ses-419!2sgt!4v1657252909553!5m2!1ses-419!2sgt"
+                width="800" height="475" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            <iframe *ngIf="casa1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.582914173956!2d-90.77771071208987!3d14.393526957841367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85891b699dea6817%3A0x86d4a0035da1f962!2sCasa%20de%20Retiro%20Los%20Volcanes!5e0!3m2!1ses-419!2sgt!4v1657253915659!5m2!1ses-419!2sgt"
+                width="800" height="475" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe *ngIf="casa2"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.4363612813017!2d-90.6261724!3d14.631153999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8dff5e3f7c59788e!2sFinca%20Alta%20Vista!5e0!3m2!1ses-419!2sgt!4v1657254512265!5m2!1ses-419!2sgt"
+                width="800" height="475" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe *ngIf="casa3"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.810058564677!2d-89.1976703!3d13.6693108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd76a13eb7ad10b1!2sCasa%20de%20Retiros%20La%20Lomita!5e0!3m2!1ses-419!2sgt!4v1657254579844!5m2!1ses-419!2sgt"
+                width="800" height="475" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe *ngIf="casa4"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.623491643269!2d-87.40091!3d14.275166299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x32d210f9ea9de4d8!2sMontecillos!5e0!3m2!1ses-419!2sgt!4v1657254612343!5m2!1ses-419!2sgt"
+                width="800" height="475" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe *ngIf="casa5"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.0496696077767!2d-86.54781589999999!3d12.6447463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x549f074b60c661ba!2sFinca%20El%20Carrizal!5e0!3m2!1ses-419!2sgt!4v1657254636684!5m2!1ses-419!2sgt"
+                width="800" height="475" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+
     </div>
 </body>

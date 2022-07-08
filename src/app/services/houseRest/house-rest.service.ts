@@ -20,4 +20,8 @@ export class HouseRestService {
   getHouses(){
     return this.http.get(environment.baseUrl + 'house/obtenerCasas', { headers: this.httpOptios});
   }
+
+  getHouse(id: string){
+    return this.http.get(environment.baseUrl + 'house/obtenerCasa/' + id , { headers: this.httpOptios});
+  }
 }
