@@ -821,9 +821,10 @@ body {
     }
 }
 
-
-#map { height: 98vh; width: 100hw; }
-select {
-  width: 30%;
-  font-size: 2rem
-} 
+@media screen and (max-width : 1280px)
+{
+  .map iframe
+  {
+    width: 52%;
+  }
+}
