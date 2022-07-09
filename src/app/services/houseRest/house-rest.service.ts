@@ -21,8 +21,8 @@ export class HouseRestService {
     return this.http.get(environment.baseUrl + 'house/obtenerCasas', { headers: this.httpOptios});
   }
 
-  getHousesPipe(){
-    return this.http.get(environment.baseUrl + 'house/obtenerCasas', { headers: this.httpOptios});
+  getHousesPipe(params : {}){
+    return this.http.post(environment.baseUrl + 'house/casaPipe', params, { headers: this.httpOptios});
   }
 
   getHouse(id: string){

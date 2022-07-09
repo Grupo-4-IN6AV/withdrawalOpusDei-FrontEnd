@@ -86,7 +86,9 @@
 
                                 </div>
                                 <div class="footer">
-                                    <a href="#" class="button">Más información</a>
+                                    <a href="#" class="button">
+                                        <i class="fa fa-info" aria-hidden="true"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -127,4 +129,10 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+    <div>
+        <h1 *ngIf="sinResultados === true" class="text-center"> 
+            No se Encontraron Resultados.
+        </h1>
+    </div>
+
 </body>

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit
     private router: Router,
     private userRest: CredentialsRestService,
   ) { 
-    this.user = new UserModel('', '', '', '', '', '', '', '','');
+    this.user = new UserModel('', '', '', '', '', '', '', '','','');
   }
 
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit
 
   login()
   {
+    console.log(this.user.date)
     var params = {
       account: this.user.username,
       password: this.user.password
