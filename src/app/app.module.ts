@@ -31,6 +31,10 @@ import { EventsAdminComponent } from './components/admin/events-admin/events-adm
 import { HousesComponent } from './components/houses/houses.component';
 import { SearchHousePipe } from './pipes/searchHouse/search-house.pipe';
 import { DevelopsComponent } from './components/develops/develops.component';
+import { SearchEventPipe } from './pipes/searchEvent/search-event.pipe';
+import { SearchReservationPipe } from './pipes/searchReservation/search-reservation.pipe';
+import { SearchRoomPipe } from './pipes/searchRoom/search-room.pipe';
+import { SearchUserPipe } from './pipes/searchUser/search-user.pipe';
 
 
 @NgModule({
@@ -54,7 +58,11 @@ import { DevelopsComponent } from './components/develops/develops.component';
     EventsAdminComponent,
     HousesComponent,
     SearchHousePipe,
-    DevelopsComponent
+    DevelopsComponent,
+    SearchEventPipe,
+    SearchReservationPipe,
+    SearchRoomPipe,
+    SearchUserPipe
   ],
   imports: [
     BrowserModule,
