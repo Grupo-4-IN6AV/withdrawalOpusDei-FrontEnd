@@ -561,20 +561,18 @@ body {
     position: absolute;
     bottom: 20px;
     right: 25px;
-    background: #0075ff;
+    background: #222;
     color: #fff;
     line-height: 2.2;
     padding: 0 20px;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 1px 6px 0 #0004;
     transition: all 0.3s;
 }
 
 .groups .footer .button:hover {
     box-shadow: 0 3px 8px 0 #0005;
-    background: #063a78;
-    right: 15px;
+    background: #ff8800;
 }
 
 .form-input {
@@ -675,9 +673,9 @@ body {
     .groups .footer .button {
         position: absolute;
         bottom: 9.5%; 
-        right: 14%;
-        left: 14%;
-        background: #0075ff;
+        right: 25%;
+        left: 25%;
+        background: #222;
         color: #fff;
         text-align: center;
         border-radius: 50px;
@@ -685,6 +683,12 @@ body {
         box-shadow: 0 1px 6px 0 #0004;
         transition: all 0.3s;
     }
+    .groups .footer .button:hover {
+      box-shadow: 0 3px 8px 0 #0005;
+      background: #ff8800;
+      right: 26%;
+      left: 26%;
+  }
 }
 
 
@@ -694,6 +698,7 @@ body {
         padding: 0;
         border-radius: 0.8rem;
     }
+
     .groups li {
         max-width: 600px;
     }
@@ -725,9 +730,14 @@ body {
         font-weight: normal;
     }
     .groups .meta-sission {
-        padding: 10px;
-        height: 185px;
+        padding: 5px;
+        height: 70px;
     }
+
+    .groups .footer .button:hover {
+      box-shadow: 0 3px 8px 0 #0005;
+      background: #ff8800;
+  }
 }
 
 @media screen and (max-width: 320px) {

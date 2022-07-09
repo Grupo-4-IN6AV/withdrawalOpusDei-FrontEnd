@@ -9,6 +9,8 @@ import { HouseRestService } from 'src/app/services/houseRest/house-rest.service'
 export class SearchHousePipe implements PipeTransform
 {
 
+  housesPipe:any;
+
   constructor
   (
     public houseComponent: HousesComponent,
@@ -38,6 +40,22 @@ export class SearchHousePipe implements PipeTransform
     {
       return houses.filter((house:any) => 
       {
+        let params = {name:search}
+        this.houseRest.getHousesPipe(params).subscribe({
+          next: (res: any) =>{
+            this.housesPipe = res.casas
+            if(this.housesPipe.length === 0)
+            {
+              this.houseComponent.sinResultados = true
+              this.houseComponent.centroamerica = false
+            }
+            else if(this.housesPipe.length !== 0)
+            {
+              this.houseComponent.sinResultados = false
+            }
+          },
+          error: (err) => console.log(err)
+        })
         return house.name.toLowerCase().includes(search.toLowerCase())
       })
     }

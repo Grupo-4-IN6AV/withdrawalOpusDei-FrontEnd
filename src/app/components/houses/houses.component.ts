@@ -19,6 +19,7 @@ export class HousesComponent implements OnInit {
   casa5: boolean = false;
   casa6: boolean = false;
   casa7: boolean = false;
+  sinResultados: boolean = false;
   
 
   constructor(
