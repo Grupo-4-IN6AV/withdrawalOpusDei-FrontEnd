@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { UserModel } from 'src/app/models/user.model';
 import { CredentialsRestService } from 'src/app/services/credentialsRest/credentials-rest.service';
+import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +18,10 @@ export class LoginComponent implements OnInit
   (
     private router: Router,
     private userRest: CredentialsRestService,
+    private _CargarScripts: CargarScriptsService
   ) { 
     this.user = new UserModel('', '', '', '', '', '', '', '','','');
+    _CargarScripts.Carga(["login"]);
   }
 
   ngOnInit(): void {
