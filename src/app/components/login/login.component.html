@@ -66,76 +66,77 @@
 <!-- Login -->
 
 <body>
-  <div class="subSubContainer">
-    <div class="subContainer">
-      <div class="container">
-        <div class="forms-container">
+  <div class="pantallaView">
+    <div class="container">
+      <div class="subContainer">
+        <div class="subSubContainer">
+        </div>
+        <div class="signin-signup">
+          <form (ngSubmit)="login()" action="#" class="sign-in-form">
+            <h2 class="title">Iniciar Sesión</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input [(ngModel)]="user.username" name="Nombre de Usuario" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input [(ngModel)]="user.password" name="Contraseña" type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Iniciar sesión" class="btnLogin solid" />
+            <p class="social-text">o iniciar sesión con otras plataformas:</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+            </div>
+            <p class=" mt-3 icons d-inline-block mb-0">Todavía no tienes una cuenta?<a routerLink="/register"
+              class="font-weight-bold text-decoration-none"> Crear una ahora</a></p>
+          </form>
         </div>
       </div>
-      <div class="signin-signup">
-        <form (ngSubmit)="login()" action="#" class="sign-in-form">
-          <h2 class="title">Iniciar Seción</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input [(ngModel)]="user.username" name="username" type="text" placeholder="Username" />
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="carruselLogin">
+            <div class="carruselLogin">
+              <div class="carousel-container justify-content-center">
+                <div id="vertical-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false"
+                  data-bs-wrap="true">
+                  <!-- Carousel slide indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-bs-target="#vertical-carousel" data-bs-slide-to="0" class="navigateCarrousel  active"></li>
+                    <li class="navigateCarrousel" data-bs-target="#vertical-carousel" data-bs-slide-to="1"></li>
+                    <li class="navigateCarrousel" data-bs-target="#vertical-carousel" data-bs-slide-to="2"></li>
+                    <li class="navigateCarrousel" data-bs-target="#vertical-carousel" data-bs-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <!-- Carousel item represents each slide -->
+                    <img class="carousel-item active" src="https://cdn-icons-png.flaticon.com/512/594/594106.png"
+                      style="left: '1rem'">
+                    <img class="carousel-item"
+                      src="https://www.25saints.com/wp-content/uploads/2021/07/flat-hotel-building.png"
+                      style="left: '1rem'">
+                    <img class="carousel-item"
+                      src="https://images.vexels.com/media/users/3/136203/isolated/preview/c40fc7e71e6332611bc3cb464468c6fd-dibujos-animados-de-edificio-de-hotel.png"
+                      style="left: '1rem'">
+                    <img class="carousel-item" src="https://cdn-icons-png.flaticon.com/512/2038/2038263.png"
+                      style="left: '1rem'">
+                  </div>
+                </div>
+                <!-- Carousel buttons -->
+                <button class="unclickable" type="button" data-bs-target="#vertical-carousel" data-bs-slide="prev">
+                  <span class="iconUp clickable" aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="unclickable" type="button" data-bs-target="#vertical-carousel" data-bs-slide="next">
+                  <span class="clickable iconDown" aria-hidden="true"><i class="fa-solid fa-caret-down"></i></span>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input [(ngModel)]="user.password" name="password" type="password" placeholder="Password" />
-          </div>
-          <input type="submit" value="Login" class="btnLogin solid" />
-          <p class="social-text">Or Sign in with social platforms</p>
-          <div class="social-media">
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </form>
-        <form action="#" class="sign-up-form">
-          <h2 class="title">Sign up</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Username" />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Contraseña" />
-          </div>
-          <input type="submit" class="btn" value="Sign up" />
-          <p class="social-text">Or Sign up with social platforms</p>
-          <div class="social-media">
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <img src="https://cdn-icons-png.flaticon.com/512/5798/5798153.png" class="image" alt="" />
+        </div>
       </div>
     </div>
   </div>
